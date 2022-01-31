@@ -1,3 +1,4 @@
+const logger = require('./logger').createLogger('sms_notify_top_lambda_sqs');
 const AWS = require('aws-sdk');
 
 let sqs = null;

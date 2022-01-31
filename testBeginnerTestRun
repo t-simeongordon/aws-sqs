@@ -1,0 +1,20 @@
+const { testLoc } = require('./testLocal');
+let event = {};
+const records = [];
+const record = {};
+const body = {
+  to: '07456135125',
+  from: 'gmail',
+  contentItemId: 'tma_mvp_freeform',
+  locale: 'en',
+  channels: ['sms'],
+  variableText: [
+    'hello test message'
+  ],
+};
+
+record['body'] = body;
+records.push(record);
+event['Records'] = records;
+console.log('dummy payload: ' + JSON.stringify(event));
+const result = testLoc(event);
